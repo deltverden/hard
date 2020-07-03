@@ -46,8 +46,8 @@ body {
   .ms .menu {
     height: 160px !important; }
     .ms .menu ul {
-      flex-direction: column;
-      align-items: center; }
+      flex-direction: column !important;
+      align-items: center !important; }
       .ms .menu ul li {
         display: block !important; }
         .ms .menu ul li::after {
@@ -92,27 +92,44 @@ body {
     position: relative;
     display: flex;
     align-items: center; }
-    .header .container .hc-head div {
+    .header .container .hc-head .hc-left {
       position: absolute;
       left: 0;
       width: 273px;
-      height: 100px; }
-      .header .container .hc-head div img {
-        width: 100%;
-        height: 100%; }
-    .header .container .hc-head p {
-      font-family: 'Open Sans Condensed', sans-serif;
+      height: 100%;
+      display: flex;
+      align-items: center; }
+      .header .container .hc-head .hc-left img {
+        width: 273px;
+        height: 100px; }
+    .header .container .hc-head .hc-right {
       position: absolute;
       right: 0;
       width: 283px;
-      height: 100px;
+      height: 100%;
       margin: 0;
-      color: #767676;
-      font-size: 32px;
-      font-weight: 300;
-      line-height: 46px;
-      letter-spacing: 1px;
-      text-align: end; }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end; }
+      .header .container .hc-head .hc-right p {
+        font-family: 'Open Sans Condensed', sans-serif;
+        color: #767676;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 46px;
+        letter-spacing: 1px; }
+      .header .container .hc-head .hc-right a {
+        color: #767676;
+        width: 201px;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        text-decoration: none;
+        border-bottom: 2px dashed rgba(118, 118, 118, 0);
+        transition: .5s; }
+        .header .container .hc-head .hc-right a:hover {
+          border-bottom: 2px dashed #767676; }
 
 .art {
   padding-bottom: 220px; }
