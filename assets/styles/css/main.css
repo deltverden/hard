@@ -28,7 +28,9 @@ body {
     top: 8px !important;
     height: 18px !important; }
   .ms .menu a {
-    font-size: .6em !important; } }
+    font-size: .6em !important; }
+  .mcr-item:nth-child(3n) {
+    margin-right: 15px !important; } }
 
 @media (max-width: 720px) {
   .hc-head {
@@ -135,7 +137,7 @@ body {
   padding-bottom: 220px; }
   .art .ms {
     width: 100%;
-    height: 542px;
+    height: 480px;
     position: relative; }
     .art .ms .menu {
       width: 100%;
@@ -240,53 +242,169 @@ body {
           transform: rotate(45deg); }
   .art .main {
     width: 100%;
-    height: 560px;
-    margin-top: -20px;
+    height: 1173px;
+    margin-top: 10px;
     margin-bottom: 195px; }
     .art .main .container {
       display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      .art .main .container .mc-left {
-        width: 350px;
-        height: 560px;
-        background: #777777;
-        padding-left: 36px; }
-        .art .main .container .mc-left h2 {
-          color: #fff;
-          font-size: 40px;
-          font-weight: 700;
-          letter-spacing: 1px;
-          margin: 20px 0 20px; }
-        .art .main .container .mc-left div {
-          width: 265px;
-          height: 372px;
-          position: relative; }
-          .art .main .container .mc-left div p {
-            color: #fff;
-            font-size: 14px;
-            font-weight: 400;
-            letter-spacing: 0.35px; }
-          .art .main .container .mc-left div a {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 400;
-            letter-spacing: 0.38px; }
-      .art .main .container .mc-right {
-        width: 569px;
-        height: 493px;
-        color: #767676; }
-        .art .main .container .mc-right h2 {
-          margin: 20px 0 20px;
-          font-size: 40px;
-          font-weight: 400;
-          letter-spacing: 1px; }
-        .art .main .container .mc-right p {
-          font-size: 14px;
-          font-weight: 400; }
+      flex-direction: column;
+      justify-content: center; }
+      .art .main .container .mc-bc .mc-link {
+        color: #767676;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: .35px; }
+      .art .main .container .mc-bc .mc-link.active {
+        text-decoration: none; }
+      .art .main .container .mc-bc .mc-span {
+        margin: 0 5px 0 10px;
+        color: #767676;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: .35px; }
+      .art .main .container .mc-lr {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 27px; }
+        .art .main .container .mc-lr .mc-left {
+          width: 178px;
+          height: 508px; }
+          .art .main .container .mc-lr .mc-left .mcl-menu {
+            height: 300px;
+            overflow: hidden; }
+            .art .main .container .mc-lr .mc-left .mcl-menu .mclm-li {
+              height: 30px;
+              overflow: hidden;
+              font-size: 18px;
+              font-weight: 400;
+              letter-spacing: 0.45px;
+              line-height: 30px;
+              list-style: none;
+              transition: .5s; }
+              .art .main .container .mc-lr .mc-left .mcl-menu .mclm-li a {
+                color: #767676;
+                text-decoration: none; }
+                .art .main .container .mc-lr .mc-left .mcl-menu .mclm-li a:hover {
+                  text-decoration: underline; }
+              .art .main .container .mc-lr .mc-left .mcl-menu .mclm-li:hover {
+                height: 118px; }
+              .art .main .container .mc-lr .mc-left .mcl-menu .mclm-li ul {
+                list-style: none;
+                padding-left: 25px; }
+                .art .main .container .mc-lr .mc-left .mcl-menu .mclm-li ul li {
+                  position: relative;
+                  line-height: 22px;
+                  letter-spacing: 0.35px;
+                  font-size: 14px; }
+                  .art .main .container .mc-lr .mc-left .mcl-menu .mclm-li ul li a:hover {
+                    color: #000; }
+                  .art .main .container .mc-lr .mc-left .mcl-menu .mclm-li ul li::before {
+                    position: absolute;
+                    content: '';
+                    left: -15px;
+                    top: 9px;
+                    width: 5px;
+                    height: 5px;
+                    background: #767676;
+                    border-radius: 100%; }
+          .art .main .container .mc-lr .mc-left .mcl-brand {
+            width: 100%;
+            height: 144px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; }
+            .art .main .container .mc-lr .mc-left .mcl-brand img {
+              width: 97px;
+              height: 111px; }
+            .art .main .container .mc-lr .mc-left .mcl-brand h2 {
+              color: #444444;
+              font-size: 30px;
+              font-weight: 700;
+              line-height: 25px;
+              letter-spacing: 0.75px; }
+        .art .main .container .mc-lr .mc-right {
+          width: 780px;
+          height: 1133px;
+          color: #767676; }
+          .art .main .container .mc-lr .mc-right .mcr-top .mcr-items {
+            display: flex;
+            flex-wrap: wrap; }
+            .art .main .container .mc-lr .mc-right .mcr-top .mcr-items .mcr-item {
+              box-sizing: border-box;
+              padding: 20px;
+              margin-right: 15px;
+              margin-bottom: 15px;
+              background: #dcdcdc;
+              width: 250px;
+              height: 380px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center; }
+              .art .main .container .mc-lr .mc-right .mcr-top .mcr-items .mcr-item:nth-child(3n) {
+                margin-right: 0; }
+              .art .main .container .mc-lr .mc-right .mcr-top .mcr-items .mcr-item img {
+                width: 210px;
+                height: 209px; }
+              .art .main .container .mc-lr .mc-right .mcr-top .mcr-items .mcr-item .mcr-title {
+                color: #767676;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: .45px; }
+                .art .main .container .mc-lr .mc-right .mcr-top .mcr-items .mcr-item .mcr-title:hover {
+                  text-decoration: underline;
+                  cursor: pointer; }
+              .art .main .container .mc-lr .mc-right .mcr-top .mcr-items .mcr-item div {
+                width: 100%;
+                display: flex;
+                justify-content: space-between; }
+                .art .main .container .mc-lr .mc-right .mcr-top .mcr-items .mcr-item div p {
+                  color: #444444;
+                  font-size: 28px;
+                  font-weight: 700;
+                  line-height: 18px;
+                  letter-spacing: .7px; }
+                .art .main .container .mc-lr .mc-right .mcr-top .mcr-items .mcr-item div img {
+                  width: 28px;
+                  height: 21px; }
+          .art .main .container .mc-lr .mc-right .mcr-top .mcr-page {
+            height: 25px;
+            margin-top: 32px;
+            margin-bottom: 67px;
+            display: flex;
+            justify-content: center; }
+            .art .main .container .mc-lr .mc-right .mcr-top .mcr-page p a {
+              text-decoration: none;
+              color: #767676;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 22px;
+              letter-spacing: 7.91px;
+              transition: .3s; }
+              .art .main .container .mc-lr .mc-right .mcr-top .mcr-page p a:hover {
+                color: #444444;
+                font-size: 18px;
+                letter-spacing: 10.17px; }
+          .art .main .container .mc-lr .mc-right .mcr-bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 28px; }
+            .art .main .container .mc-lr .mc-right .mcr-bottom p {
+              color: #767676;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 22px;
+              letter-spacing: .35px; }
+              .art .main .container .mc-lr .mc-right .mcr-bottom p:first-child {
+                width: 371px;
+                margin-right: 20px; }
+              .art .main .container .mc-lr .mc-right .mcr-bottom p:last-child {
+                width: 368px;
+                margin-left: 20px; }
 
 .footer {
   width: 100%;

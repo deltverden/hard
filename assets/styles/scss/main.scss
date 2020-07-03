@@ -59,6 +59,12 @@ body {
             }
         }
     }
+
+    .mcr-item {
+        &:nth-child(3n) {
+            margin-right: 15px !important;
+        }
+    }
 }
 
 @media (max-width: 720px) {
@@ -213,7 +219,7 @@ body {
     padding-bottom: 220px;
     .ms {
         width: 100%;
-        height: 80px + 462px;
+        height: 480px;
         position: relative;
     
         .menu {
@@ -367,68 +373,245 @@ body {
     
     .main {
         width: 100%;
-        height: 560px;
-        margin-top: -20px;
+        height: 1173px;
+        margin-top: 10px;
         margin-bottom: 195px;
         
         .container {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-    
-            .mc-left {
-                width: 350px;
-                height: 560px;
-                background: #777777;
-                padding-left: 36px;
-    
-                h2 {
-                    color: #fff;
-                    font-size: 40px;
-                    font-weight: 700;
-                    letter-spacing: 1px;
-                    margin: 20px 0 20px;
-                }
-    
-                div {
-                    width: 265px;
-                    height: 372px;
-                    position: relative;
-    
-                    p {
-                        color: #fff;
-                        font-size: 14px;
-                        font-weight: 400;
-                        letter-spacing: 0.35px;
-                    }
-    
-                    a {
-                        position: absolute;
-                        bottom: 0;
-                        right: 0;
-                        color: #fff;
-                        font-size: 14px;
-                        font-weight: 400;
-                        letter-spacing: 0.38px;
-                    }
-                }
-            }
-        
-            .mc-right {
-                width: 569px;
-                height: 493px;
-                color: #767676;
-    
-                h2 {
-                    margin: 20px 0 20px;
-                    font-size: 40px;
-                    font-weight: 400;
-                    letter-spacing: 1px;
-                }
-    
-                p {
+            flex-direction: column;
+            justify-content: center;
+
+            .mc-bc {
+
+                .mc-link {
+                    color: #767676;
                     font-size: 14px;
                     font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: .35px;
+                }
+
+                .mc-link.active {
+                    text-decoration: none;
+                }
+
+                .mc-span {
+                    margin: 0 5px 0 10px;
+                    color: #767676;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: .35px;
+                }
+            }
+
+            .mc-lr {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 27px;
+
+                .mc-left {
+                    width: 178px;
+                    height: 508px;
+        
+                    .mcl-menu {
+                        height: 300px;
+                        overflow: hidden;
+
+                        .mclm-li {
+                            height: 30px;
+                            overflow: hidden;
+                            font-size: 18px;
+                            font-weight: 400;
+                            letter-spacing: 0.45px;
+                            line-height: 30px;
+                            list-style: none;
+                            transition: .5s;
+
+                            a {
+                                color: #767676;
+                                text-decoration: none;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            &:hover {
+                                height: 118px;
+                            }
+
+                            ul {
+                                list-style: none;
+                                padding-left: 25px;
+
+                                li {
+                                    position: relative;
+                                    line-height: 22px;
+                                    letter-spacing: 0.35px;
+                                    font-size: 14px;
+
+                                    a {
+                                        &:hover {
+                                            color: #000;
+                                        }
+                                    }
+
+                                    &::before {
+                                        position: absolute;
+                                        content: '';
+                                        left: -15px;
+                                        top: 9px;
+                                        width: 5px;
+                                        height: 5px;
+                                        background: #767676;
+                                        border-radius: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .mcl-brand {
+                        width: 100%;
+                        height: 144px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 97px;
+                            height: 111px;
+                        }
+
+                        h2 {
+                            color: #444444;
+                            font-size: 30px;
+                            font-weight: 700;
+                            line-height: 25px;
+                            letter-spacing: 0.75px;
+                        }
+                    }
+                }
+            
+                .mc-right {
+                    width: 780px;
+                    height: 1133px;
+                    color: #767676;
+        
+                    .mcr-top {
+                        .mcr-items {
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            .mcr-item {
+                                box-sizing: border-box;
+                                padding: 20px;
+                                margin-right: 15px;
+                                margin-bottom: 15px;
+                                background: #dcdcdc;
+                                width: 250px;
+                                height: 380px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                &:nth-child(3n) {
+                                    margin-right: 0;
+                                }
+
+                                img {
+                                    width: 210px;
+                                    height: 209px;
+                                }
+
+                                .mcr-title {
+                                    color: #767676;
+                                    font-size: 18px;
+                                    font-weight: 400;
+                                    line-height: 18px;
+                                    letter-spacing: .45px;
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                div {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+
+                                    p {
+                                        color: #444444;
+                                        font-size: 28px;
+                                        font-weight: 700;
+                                        line-height: 18px;
+                                        letter-spacing: .7px;
+                                    }
+
+                                    img {
+                                        width: 28px;
+                                        height: 21px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .mcr-page {
+                            height: 25px;
+                            margin-top: 32px;
+                            margin-bottom: 67px;
+                            display: flex;
+                            justify-content: center;
+
+                            p {
+                                a {
+                                    text-decoration: none;
+                                    color: #767676;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 22px;
+                                    letter-spacing: 7.91px;
+                                    transition: .3s;
+
+                                    &:hover {
+                                        color: #444444;
+                                        font-size: 18px;
+                                        letter-spacing: 10.17px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .mcr-bottom {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 28px;
+
+                        p {
+                            color: #767676;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 22px;
+                            letter-spacing: .35px;
+
+                            &:first-child {
+                                width: 371px;
+                                margin-right: 20px;
+                            }
+
+                            &:last-child {
+                                width: 368px;
+                                margin-left: 20px;
+                            }
+                        }
+                    }
                 }
             }
         }
