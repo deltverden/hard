@@ -16,7 +16,11 @@ body {
 
 @media (max-width: 1248px) {
   .slider div img {
-    display: none; } }
+    display: none; }
+  .slider .slick-prev {
+    display: none !important; }
+  .slider .slick-next {
+    display: none !important; } }
 
 @media (max-width: 1080px) {
   .hc-head div img {
@@ -129,7 +133,7 @@ body {
         letter-spacing: 0.6px;
         text-decoration: none;
         border-bottom: 2px dashed rgba(118, 118, 118, 0);
-        transition: .5s; }
+        transition: .2s; }
         .header .container .hc-head .hc-right a:hover {
           border-bottom: 2px dashed #767676; }
 
@@ -266,11 +270,15 @@ body {
         letter-spacing: .35px; }
       .art .main .container .mc-lr {
         display: flex;
-        justify-content: space-between;
-        margin-top: 27px; }
+        position: relative;
+        margin-top: 27px;
+        height: 1124px; }
         .art .main .container .mc-lr .mc-left {
           width: 178px;
-          height: 508px; }
+          height: 508px;
+          position: absolute;
+          left: 0;
+          top: 0; }
           .art .main .container .mc-lr .mc-left .mcl-menu {
             height: 300px;
             overflow: hidden; }
@@ -327,8 +335,11 @@ body {
               letter-spacing: 0.75px; }
         .art .main .container .mc-lr .mc-right {
           width: 780px;
-          height: 1133px;
-          color: #767676; }
+          height: 100%;
+          color: #767676;
+          position: absolute;
+          right: 0;
+          top: 0; }
           .art .main .container .mc-lr .mc-right .mcr-top .mcr-items {
             display: flex;
             flex-wrap: wrap; }
@@ -377,18 +388,22 @@ body {
             margin-bottom: 67px;
             display: flex;
             justify-content: center; }
-            .art .main .container .mc-lr .mc-right .mcr-top .mcr-page p a {
+            .art .main .container .mc-lr .mc-right .mcr-top .mcr-page p .mcr-link {
               text-decoration: none;
               color: #767676;
               font-size: 14px;
               font-weight: 400;
               line-height: 22px;
-              letter-spacing: 7.91px;
-              transition: .3s; }
-              .art .main .container .mc-lr .mc-right .mcr-top .mcr-page p a:hover {
+              margin: 0 5px;
+              transition: .3s;
+              position: relative; }
+              .art .main .container .mc-lr .mc-right .mcr-top .mcr-page p .mcr-link:hover {
+                color: #444444;
+                text-decoration: underline; }
+              .art .main .container .mc-lr .mc-right .mcr-top .mcr-page p .mcr-link.active {
                 color: #444444;
                 font-size: 18px;
-                letter-spacing: 10.17px; }
+                margin: 0 7px; }
           .art .main .container .mc-lr .mc-right .mcr-bottom {
             display: flex;
             justify-content: space-between;

@@ -24,6 +24,14 @@ body {
                 display: none;
             }
         }
+
+        .slick-prev {
+            display: none !important;
+        }
+
+        .slick-next {
+            display: none !important;
+        }
     }
 }
 
@@ -204,7 +212,7 @@ body {
                     letter-spacing: 0.6px;
                     text-decoration: none;
                     border-bottom: 2px dashed rgba(118, 118, 118, 0);
-                    transition: .5s;
+                    transition: .2s;
 
                     &:hover {
                         border-bottom: 2px dashed rgba(118, 118, 118, 1);
@@ -292,6 +300,7 @@ body {
         }
         
         .slider {
+
             width: 100%;
             height: 462px;
             background: #f8f8f8;
@@ -383,7 +392,6 @@ body {
             justify-content: center;
 
             .mc-bc {
-
                 .mc-link {
                     color: #767676;
                     font-size: 14px;
@@ -408,12 +416,17 @@ body {
 
             .mc-lr {
                 display: flex;
-                justify-content: space-between;
+                position: relative;
                 margin-top: 27px;
+                height: 1124px;
 
                 .mc-left {
                     width: 178px;
                     height: 508px;
+
+                    position: absolute;
+                    left: 0;
+                    top: 0;
         
                     .mcl-menu {
                         height: 300px;
@@ -498,9 +511,13 @@ body {
             
                 .mc-right {
                     width: 780px;
-                    height: 1133px;
+                    height: 100%;
                     color: #767676;
-        
+
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+
                     .mcr-top {
                         .mcr-items {
                             display: flex;
@@ -570,19 +587,25 @@ body {
                             justify-content: center;
 
                             p {
-                                a {
+                                .mcr-link {
                                     text-decoration: none;
                                     color: #767676;
                                     font-size: 14px;
                                     font-weight: 400;
                                     line-height: 22px;
-                                    letter-spacing: 7.91px;
+                                    margin: 0 5px;
                                     transition: .3s;
+                                    position: relative;
 
                                     &:hover {
                                         color: #444444;
+                                        text-decoration: underline;
+                                    }
+
+                                    &.active {
+                                        color: #444444;
                                         font-size: 18px;
-                                        letter-spacing: 10.17px;
+                                        margin: 0 7px;
                                     }
                                 }
                             }
