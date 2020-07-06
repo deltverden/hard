@@ -11,17 +11,33 @@
     <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css">
 </head>
 <body>
-    <!--<div class="feedback">
-        <div>
-            <form id="fb-form" action="">
+    <div id="fb" class="feedback fade">
+        <div class="fb-back">
+            <form id="fb-form" action="assets/js/feedback.js">
                 <h2>Обратная связь</h2>
-                <label>Ваше имя *<input name="name" type="text"></label>
-                <label>Телефон *<input name="phone" type="tel"></label>
-                <label>Email *<input name="email" type="email"></label>
-                <textarea name="message" form="fb-form" cols="30" rows="10"></textarea>
+                <div>
+                    <p>Имя <span>*</span></p>
+                    <input type="text" name="name" class="name fb-input">
+                </div>
+                <div>
+                    <p>Телефон <span>*</span></p>
+                    <input type="tel" name="phone" class="phone fb-input">
+                </div>
+                <div>
+                    <p>Email <span>*</span></p>
+                    <input type="email" name="email" class="email fb-input">
+                </div>
+                <div>
+                    <p>Сообщение</p>
+                    <textarea name="message" class="message" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <input class="fb-btn" type="submit" name="" id="" value="Отправить">
+                </div>
             </form>
+            <div class="fb-close"></div>
         </div>
-    </div> -->
+    </div>
     <header class="header">
         <div class="container">
             <div class="hc-head">
@@ -29,11 +45,11 @@
                     <img src="assets/images/logo.png" alt="Logo" title="Logo">
                 </div>
                 <div class="hc-right">
-                    <p>
+                    <p class="fb-phones">
                         +7(499) 777-77-77<br>
                         +7(499) 777-77-77
                     </p>
-                    <a href="">Обратная связь</a>
+                    <p class="fb-link">Обратная связь</p>
                 </div>
             </div>
         </div>
@@ -42,15 +58,15 @@
         <div class="ms">
             <div class="menu">
                 <div class="container">
-                    <div class="hc-menu">
-                        <ul>
-                            <li><a href="">Главная</a></li>
-                            <li><a href="">Каталог</a></li>
-                            <li><a href="">Доставка и оплата</a></li>
-                            <li><a href="">Прайс-лист</a></li>
-                            <li><a href="">Контакты</a></li>
+                    <nav class="main-navigation">
+                        <ul class="nav-menu">
+                            <li class="nav-item"><a href="">Главная</a></li>
+                            <li class="nav-item"><a href="">Каталог</a></li>
+                            <li class="nav-item"><a href="">Доставка и оплата</a></li>
+                            <li class="nav-item"><a href="">Прайс-лист</a></li>
+                            <li class="nav-item"><a href="">Контакты</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
             </div>
             <div class="slider">
@@ -219,25 +235,25 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <div class="fc">
-                <p>
+            <div class="footer-block">
+                <p class="copyright">
                     © 2012–2013 ЗАО «Компания» 
                     info@name.ru
                 </p>
             </div>
-            <div class="fc">
-                <ul>
-                    <li><a href="">Главная</a></li>
-                    <li><a href="">Каталог</a></li>
-                    <li><a href="">Доставка и оплата</a></li>
-                    <li><a href="">Прайс-лист</a></li>
-                    <li><a href="">Контакты</a></li>
+            <nav class="footer-block footer-navigation">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#">Главная</a></li>
+                    <li class="nav-item"><a href="#">Каталог</a></li>
+                    <li class="nav-item"><a href="#">Доставка и оплата</a></li>
+                    <li class="nav-item"><a href="#">Прайс-лист</a></li>
+                    <li class="nav-item"><a href="#">Контакты</a></li>
                 </ul>
-            </div>
-            <div class="fc">
-                <img src="assets/images/company.png" alt="">
-                <p>
-                    <a href="">Разработка сайта</a> —
+            </nav>
+            <div class="footer-block">
+                <img class="logo" src="assets/images/company.png" alt="" title="Logo">
+                <p class="title">
+                    <a href="#">Разработка сайта</a> —
                     компания «Пиксель Плюс»
                 </p>
             </div>
@@ -247,5 +263,6 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="node_modules/slick-carousel/slick/slick.min.js"></script>
     <script type="text/javascript" src="assets/js/slider.js"></script>
+    <script type="text/javascript" src="assets/js/feedback.js"></script>
 </body>
 </html>
