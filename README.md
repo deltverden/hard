@@ -1,2 +1,2 @@
 # hard
-Hard level
+Hard Level
