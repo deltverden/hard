@@ -361,7 +361,7 @@ body {
                 justify-content: center;
                 align-items: flex-end;
 
-                .fb-phones {
+                .phones {
                     font-family: 'Open Sans Condensed', sans-serif;
                     color: #767676;
                     font-size: 32px;
@@ -370,7 +370,7 @@ body {
                     letter-spacing: 1px;
                 }
 
-                .fb-link {
+                .feedback-link {
                     color: #767676;
                     width: 210px;
                     margin: 0;
@@ -399,9 +399,9 @@ body {
     }
 }
 
-.art {
+.general {
     padding-bottom: 220px;
-    .ms {
+    .nav-plus-slider {
         width: 100%;
         height: 480px;
         position: relative;
@@ -567,8 +567,8 @@ body {
             flex-direction: column;
             justify-content: center;
 
-            .mc-bc {
-                .mc-link {
+            .breadcrumbs {
+                .bc-link {
                     color: #767676;
                     font-size: 14px;
                     font-weight: 400;
@@ -862,7 +862,7 @@ body {
                 height: 38px;
             }
 
-            .title, .title a {
+            .about-us, .about-us a {
                 color: #fff;
                 font-size: 14px;
                 font-weight: 400;
